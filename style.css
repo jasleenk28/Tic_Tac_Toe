@@ -1,0 +1,126 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.heading{
+    display: flex;
+    flex-direction: column;
+    background-color: #116A7B;
+    color: white;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    /* height: ; */
+    font-size: 2.5rem;
+    font-family: 'Lato', sans-serif;
+    
+}
+
+.container{
+    display: flex;
+    /* background-color: aqua; */
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.gameContainer{
+    display: grid;
+    grid-template-rows: repeat(3,10vw);
+    grid-template-columns: repeat(3,10vw);
+    font-family: 'Lato', sans-serif;
+    position: relative;
+}
+
+.block{
+    border: 2px solid;
+    font-size: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.block:hover{
+    background-color: rgb(223, 226, 233);
+}
+
+ img{
+   width: 0;
+   transition: width 1s ease-in-out;
+}
+
+/* .imgbox{
+    
+} */
+
+.gameInfo>div{
+    margin: 10px;
+    font-family: 'Acme', sans-serif;
+    font-size: 30px;
+    display: flex;
+    flex-direction: column;
+}
+
+.bt-0{
+    border-top: 0px;
+}
+
+.br-0{
+    border-right: 0px;
+}
+
+.bl-0{
+    border-left: 0px;
+}
+
+.bb-0{
+    border-bottom: 0px;
+}
+
+#reset{
+    margin-top: 10px;
+    margin-left: 10px;
+    background-color: #d3ecf1;
+    /* padding: px; */
+    border-radius: 10px;
+    font-size: 20px;
+    cursor: pointer;
+    font-family: 'Acme', sans-serif;
+    font-weight: bolder;
+}
+
+.line{
+    background-color: #9fcad2;
+    width: 0vw;
+    height: 3px;
+    position: absolute;
+    transform: translate(5vw, 5vw) rotate(0deg);
+    /* transition: width 1s ease-in-out; */
+}
+
+@media (max-width:950px){
+    .heading{
+        font-size: 4vw;
+    }
+
+    .container{
+        display: flex;
+        /* flex-: wrap; */
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        }
+
+    .gameContainer{
+        display: grid;
+    grid-template-rows: repeat(3,20vw);
+    grid-template-columns: repeat(3,24vw);
+    }
+
+    .gameInfo{
+        margin-top: 20px;
+        font-size: 8vw;
+    }
+}
